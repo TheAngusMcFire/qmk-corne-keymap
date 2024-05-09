@@ -18,6 +18,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+enum {
+  TD_MO1_CAPS = 0,
+  TD_MO2_CAPS = 1
+};
+
+//Tap Dance Definitions
+tap_dance_action_t tap_dance_actions[] = {
+  //Tap once for Esc, twice for Caps Lock
+  // [TD_MO1_CAPS]  = ACTION_TAP_DANCE_DOUBLE(MO(1), KC_ESC),
+  // [TD_MO2_CAPS]  = ACTION_TAP_DANCE_DOUBLE(MO(2), KC_ESC)
+// Other declarations would go here, separated by commas, if you have them
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -27,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(2),  KC_SPC,     KC_ENT,   MO(1), KC_RCTL
+                                          KC_LGUI,   LT(2, KC_ESC),  KC_SPC,     KC_ENT,   LT(1, KC_ESC), KC_RCTL
                                       //`--------------------------'  `--------------------------'
 
   ),
