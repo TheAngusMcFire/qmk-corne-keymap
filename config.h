@@ -27,12 +27,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 // #define MASTER_RIGHT
 // #define EE_HANDS
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
+// #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
+// #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 // #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17 // Specify a optional status led by GPIO number which blinks when entering the bootloader//#define QUICK_TAP_TERM 0
 
 // #define RETRO_TAPPING
-#define TAPPING_TERM 130
+// #define TAPPING_TERM 150
 // #define TAPPING_TERM_PER_KEY
 
 #ifdef RGBLIGHT_ENABLE
