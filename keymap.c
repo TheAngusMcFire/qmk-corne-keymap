@@ -31,14 +31,18 @@ tap_dance_action_t tap_dance_actions[] = {
 // Other declarations would go here, separated by commas, if you have them
 };
 
-// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case LCTL_T(KC_SPC):
-//             return 180;
-//         default:
-//             return TAPPING_TERM;
-//     }
-// }
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case MT(MOD_LALT, KC_S):
+            return 240;
+        case MT(MOD_RALT, KC_L):
+            return 240;
+        case LT(2, KC_TAB): return 240;
+        case LT(1, KC_BSPC): return 240;
+        default:
+            return 150;
+    }
+}
 
 // todo:
 // * auto shift implementation
