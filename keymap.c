@@ -40,7 +40,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LT(2, KC_TAB): return 240;
         case LT(1, KC_BSPC): return 240;
         default:
-            return 120;
+            return 140;
     }
 }
 
